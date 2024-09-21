@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Player</title>
+    <style>
+        body {
+            background-image: "deleteplayer.jpg";
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            font-family: Arial, sans-serif; /* Use a commonly available font for better cross-browser compatibility */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        
+.go-home-btn {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #3f67cc;
+    color: #efe9e9;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.go-home-btn:hover {
+    background-color: #bb4646;
+}
+
+.go-home-btn:focus {
+    outline: none;
+}
+
+.go-home-btn:active {
+    background-color: #bbb;
+}
+
+.go-home-btn:hover, .go-home-btn:focus, .go-home-btn:active {
+    transform: translateY(-1px);
+}
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the container fill the viewport height */
+        }
+
+        .form-wrapper {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-wrapper input[type="text"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-wrapper input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            color: #fff;
+            background-color: #007bff; /* Blue color for submit button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-wrapper input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker shade of blue on hover */
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h2 class="form-title">Delete Player</h2>
+            <form action="delete_player.php" method="post">
+                <label for="playername">Enter Player Name:</label>
+                <input type="text" id="playername" name="playername" placeholder="Player Name" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <button class="go-home-btn" onclick="window.location.href = 'admin1st.html';">Go Back Home</button>
+
+</body>
+</html>

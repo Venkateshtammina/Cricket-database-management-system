@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CREATE AN ACCOUNT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-repeat: no repeat;
+            background-size: 100%;
+            background-color: #f0f0f0; /* Set a background color */
+        }
+
+        form {
+            border: 0px solid #f1f1f1;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: rgb(233, 18, 18);
+            margin-top: 50px; /* Add some margin at the top */
+        }
+
+        .container {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .container input[type=text],
+        .container input[type=password],
+        .container input[type=EMAIL] {
+            width: 80%; /* Adjusted width for better alignment */
+            padding: 12px 20px;
+            margin: 8px auto; /* Center the inputs */
+            display: block; /* Make inputs display as block */
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px auto; /* Center the button */
+            border: inset;
+            cursor: pointer;
+            width: 80%; /* Adjusted width for better alignment */
+            display: block; /* Make button display as block */
+        }
+
+        button1 {
+            color: white;
+            margin: 0 auto;
+            display: block;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body background="img/bggg.jpg">
+    <h1><i><b>CREATE A NEW ACCOUNT</b></i></h1>
+    <form action="create.php" method="post">
+        <div class="container">
+           <label for="uname"><b> USER NAME : </b></label>
+            <input type="text" placeholder="Enter your user name" name="uname" required><br><br>
+            
+            <label for="uname"><b> FULL NAME:</b></label>
+
+            <input type="text" placeholder="Enter your name" name="fname" required><br><br>
+            <label for="uname"><b> EMAIL :    </b></label>
+            <input type="EMAIL" placeholder="Enter your email address" name="email" required><br><br>
+            
+           <label for="uname"><b>PASSWORD:</b></label>
+            <input type="password" placeholder="Create a password" name="psw" required><br><br>
+            
+            <label for="uname"><b>CONFIRM PASSWORD:</b></label>
+            <input type="password" placeholder="Confirm password" name="conpsw" required><br><br>
+            
+
+            <button type="submit">SUBMIT</button><br>
+            <button1>Already have an Acoount? <a href="login.html">Login</a></button1>
+
+        </div>
+    </form>
+</body>
+</html>

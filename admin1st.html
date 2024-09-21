@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple & Beautiful Home Page</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 90%;
+    background-color: #7e93be;
+    transition: 0.3s;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-top: 50px;
+}
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 48%; /* Adjusted width to occupy 80% of the viewport */
+    max-width: 1000px; /* Added max-width to limit the width on larger screens */
+    background-color: #f8f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container p {
+    font-size: 24px;
+    text-align: center;
+}
+input[type="text"],
+input[type="submit"] {
+    width: 100%; /* Modified width to occupy 100% of the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    background-color: #3d9340;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d2445b;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: #141212;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #131212;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    color: #f0eaea;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #5895FF;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.content h1 {
+    color: #333;
+}
+
+.menu-btn {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #100f0f;
+    z-index: 999;
+}
+</style>
+</head>
+<body>
+
+<div class="menu-btn">&#9776;</div>
+
+<div class="sidebar">
+    <div class="close-btn" onclick="closeSidebar()">&times;</div>
+    <ul>
+        <li><a href="admin1st.html">Home</a></li>
+        <li><a href="schedule.php">Schedules</a></li>
+        <li><a href="stadium.php">Stadiums</a></li>
+        <li><a href="cricket_boards.php">Cricket Boards</a></li>
+        <li><a href="pointstable.php">Points Table</a></li>
+        <li><a href="batsmanrankings.php">Batsman Rankings</a></li>
+        <li><a href="bowlerrankings.php">Bowler Rankings</a></li>
+        <li><a href="allrounderrankings.php">Allrounder Rankings</a></li>
+        <li><a href="addplayer.html">Add Player</a></li>
+        <li><a href="addstadium.html">Add Stadium</a></li>
+        <li><a href="addschedule.html">Add Schedule</a></li>
+        <li><a href="updateresults.html">Update points table</a></li>
+        <li><a href="deleteplayer.html">Delete Player</a></li>
+        <li><a href="deletestadium.html">Delete Stadium</a></li>
+        <li><a href="deleteschedule.html">Delete Schedule</a></li>
+        <li><a href="teamratingadmin.php">Team Ratings</a></li>
+        <li><a href="update player.html">Update Player</a></li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="admin.html">Logout</a></li>
+        
+    </ul>
+</div>
+<div class="content">
+    <center><h1>Welcome Admin</h1>
+    <p>This is the admin side home page</p>
+    <p>Click the menu icon to open the sidebar and explore the links.</p></center>
+</div>
+<div class="container">
+    <form action="player_search.php" method="post">
+      <p style="text-align: center; font-size: 24px;">Player Name</p>
+      <input type="text" placeholder="Enter Player Name" name="playername" style="color: #1a1212;">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+
+<div class="content">
+    
+    <img src="101.png" width="80%"height="20%" alt="logo">
+    
+
+<div>
+    <p> <a href="about.html">Indian Premier is the world's biggest cricket league,know more..</a></p>
+</div>
+
+</div>
+
+
+
+<script>
+    function closeSidebar() {
+        document.querySelector('.sidebar').classList.remove('show');
+    }
+
+    document.querySelector('.menu-btn').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>

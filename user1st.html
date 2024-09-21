@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Home Page</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #D2FFFB; /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 1000px; /* Increased max-width */
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden; /* Added to contain floats */
+        }
+
+        /* Header styles */
+        header {
+            background: #459453;
+            color: #f6efef;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Center the items vertically */
+            text-align: center;
+            flex-wrap: wrap; /* Allow the items to wrap */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center; /* Center the items vertically */
+        }
+
+        nav ul li {
+            margin-right: 20px; /* Adjust as needed */
+        }
+
+        nav ul li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        nav ul li a {
+            color: #f1ebeb;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #333;
+        }
+
+        /* Main content sections */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px; /* Added margin to separate from header */
+        }
+
+        .section {
+            width: calc(50% - 20px);
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f3d8d8; /* Changed background color to white */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(234, 207, 207, 0.1); /* Added box shadow */
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+        }
+
+        .section a {
+            display: block;
+            text-align: center;
+            background-color: #4975ec;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .section a:hover {
+            background-color:#df4a77 ;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #459453;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <h1><center>WELCOME</center></h1>
+                <ul>
+                    <li><a href="user1st.html">Home</a></li>
+                    <li><a href="teamratingsuser.php">Team Ratings</a></li>
+                    <li><a href="stadium_u.php">Stadiums</a></li>
+                    <li><a href="cricket_boards_u.php">Cricket boards</a></li>
+                    <li><a href="login.html">LOGOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2>Batsman Rankings</h2>
+            <p><b>Recent:</b> Batting Rankings are out.</p>
+            <a href="batsmanrankings_u.php">Visit Page</a>
+        </section>
+
+        <section class="section">
+            <h2>About</h2>
+            <p>We provide top-notch services to our clients.</p>
+            <a href="about_u.html">Learn More</a>
+        </section>
+
+        <section class="section">
+            <h2>Bowler Rankings</h2>
+            <p><b>Recent:</b> Bowler rankings have been announced</p>
+            <a href="bowlerrankings_u.php">Visit Page</a>
+        </section>
+
+        <section class="section">
+            <h2></h2>
+            <form action="player_search_user.php" method="post">
+                <p style=" font-size: 24px;"><b>Player Search</b></p>
+                <input type="text" placeholder="Enter Player Name" name="playername" style="color: #1a1212;">
+                <input type="submit" value="Search">
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Allrounder Rankings</h2>
+            <p><b>Recent:</b> Allrounder Rankings are out.</p>
+            <a href="allrounderrankings_u.php">Visit Page</a>
+        </section>
+
+        <section class="section">
+            <h2>Points Table</h2>
+            <p>Check out the Standings in Points table</p>
+            <a href="pointstable_u.php">Click here</a>
+        </section>
+
+        <section class="section">
+            <h2>Schedules</h2>
+            <p>View Schedules.</p>
+            <a href="schedule_u.php">Visit Page</a>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
